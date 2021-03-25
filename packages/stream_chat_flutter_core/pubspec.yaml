@@ -12,12 +12,13 @@ environment:
 dependencies:
   # stream_chat: ^1.5.0
   stream_chat:
-    git: https://github.com/GetStream/stream-chat-flutter/
-    ref: 67f62d06926b32e2e6df47ce707c743c1554196c
-    path: packages/stream_chat
+    git:
+      url: https://github.com/GetStream/stream-chat-flutter/
+      ref: 67f62d06926b32e2e6df47ce707c743c1554196c
+      path: packages/stream_chat
   flutter:
     sdk: flutter
-  rxdart: ^0.25.0
+  rxdart: ^0.26.0
 
 dev_dependencies:
   mockito: ^4.1.4
