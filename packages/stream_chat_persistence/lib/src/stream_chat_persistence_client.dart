@@ -259,9 +259,9 @@ class StreamChatPersistenceClient extends ChatPersistenceClient {
   @override
   Future<void> updateChannelQueries(
     Map<String, dynamic> filter,
-    List<String> cids,
-    bool clearQueryCache,
-  ) =>
+    List<String> cids, {
+    bool clearQueryCache = false,
+  }) =>
       _readProtected(() async {
         _logger.info('updateChannelQueries');
         return db.channelQueryDao.updateChannelQueries(
