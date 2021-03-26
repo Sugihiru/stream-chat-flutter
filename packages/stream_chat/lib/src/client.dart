@@ -273,12 +273,12 @@ class StreamChatClient {
               }
 
               logger.info('''
-    
+
           method: ${options.method}
-          url: ${options.uri} 
+          url: ${options.uri}
           headers: ${options.headers}
           data: $stringData
-    
+
         ''');
               handler.next(options);
             },
@@ -726,6 +726,7 @@ class StreamChatClient {
         'payload': jsonEncode(payload),
       },
     );
+    logger.info('Query channel response');
 
     final res = decode<QueryChannelsResponse>(
       response.data,
@@ -826,6 +827,8 @@ class StreamChatClient {
       );
       return response;
     } on DioError catch (error) {
+      logger.info("Error Dio");
+      logger.info(error.toString());
       // ignore: only_throw_errors
       throw _parseError(error);
     }
