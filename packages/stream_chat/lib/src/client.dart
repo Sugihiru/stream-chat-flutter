@@ -694,7 +694,7 @@ class StreamChatClient {
       }
     }
 
-    logger.info('Query channel start');
+    logger.info('Query channel startxxx');
     final defaultOptions = {
       'state': true,
       'watch': true,
