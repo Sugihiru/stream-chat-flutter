@@ -13,8 +13,9 @@ dependencies:
   # stream_chat: ^1.5.0
   stream_chat:
     git:
-      url: https://github.com/GetStream/stream-chat-flutter/
-      ref: f45fcd0bc281f20fa6eaf521c5de3e0153361055
+      # url: https://github.com/GetStream/stream-chat-flutter/
+      # ref: f45fcd0bc281f20fa6eaf521c5de3e0153361055
+      url: https://github.com/Sugihiru/stream-chat-flutter
       path: packages/stream_chat
   flutter:
     sdk: flutter
