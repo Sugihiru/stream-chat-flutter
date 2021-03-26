@@ -821,10 +821,12 @@ class StreamChatClient {
     Map<String, dynamic> queryParameters,
   }) async {
     try {
+      logger.info("Doing Dio query");
       final response = await httpClient.get<String>(
         path,
         queryParameters: queryParameters,
       );
+      logger.info("End query");
       return response;
     } on DioError catch (error) {
       logger.info("Error Dio");
